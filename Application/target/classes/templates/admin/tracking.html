@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Register package for tracking</title>
+</head>
+<body>
+<form th:action="@{/admin/tracking}" th:method="post">
+    <ul>
+        <input type="text" name="name" placeholder="Package name *" required="required"/>
+        <input type="submit" value="Track package" />
+    </ul>
+</form>
+</body>
+</html>

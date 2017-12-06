@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Register</title>
+</head>
+<body>
+<form th:action="@{/register}" method="post">
+    <table>
+        <tr>
+            <td>Name:</td>
+            <td><input type='text' name='name' placeholder="Name *"/></td>
+        </tr>
+        <tr>
+            <td>Username:</td>
+            <td><input type='text' name='username' placeholder="Username *"/></td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td><input type='password' name='password' placeholder="Password *"/></td>
+        </tr>
+        <tr>
+            <td><input name="submit" type="submit" value="Submit" /></td>
+        </tr>
+        <tr>
+            <td><a th:href="@{/login}">Back</a> </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

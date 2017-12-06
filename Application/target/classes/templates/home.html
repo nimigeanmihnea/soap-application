@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Home</title>
+</head>
+<body>
+<ul>
+    <li><a th:href="@{/logout}">Logout</a></li>
+    <li sec:authorize="hasRole('ADMIN')"><a th:href="@{/admin/add}">Add package</a> </li>
+    <li sec:authorize="hasRole('ADMIN')"><a th:href="@{/admin/remove}">Remove package</a> </li>
+    <li sec:authorize="hasRole('ADMIN')"><a th:href="@{/admin/tracking}">Register package for tracking</a> </li>
+    <li sec:authorize="hasRole('ADMIN')"><a th:href="@{/admin/status}">Update package status</a> </li>
+    <li sec:authorize="hasRole('USER')"><a th:href="@{/user/view}">List packages</a> </li>
+    <li sec:authorize="hasRole('USER')"><a th:href="@{/user/search}">Search package</a> </li>
+    <li sec:authorize="hasRole('USER')"><a th:href="@{/user/status}">Package status</a> </li>
+</ul>
+</body>
+</html>

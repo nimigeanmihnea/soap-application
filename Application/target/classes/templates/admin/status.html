@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Update package status</title>
+</head>
+<body>
+<form th:action="@{/admin/status}" th:method="post">
+    <ul>
+        <input type="text" name="name" placeholder="Package name *" required="required"/>
+        <input type="text" name="city" placeholder="City *" required="required"/>
+        <input type="submit" value="Update status" />
+    </ul>
+</form>
+</body>
+</html>

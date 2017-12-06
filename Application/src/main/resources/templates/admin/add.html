@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Add package</title>
+</head>
+<body>
+    <form th:action="@{/admin/add}" th:method="post">
+        <ul>
+        <input type="text" name="sender" placeholder="Sender Username *" required="required"/>
+        <input type="text" name="receiver" placeholder="Receiver Username *" required="required"/>
+        <input type="name" name="name" placeholder="Name *" required="required"/>
+        <input type="text" name="description" placeholder="Description *" required="required"/>
+        <input type="text" name="senderCity" placeholder="Sender City *" required="required"/>
+        <input type="text" name="destinationCity" placeholder="Destination City *" required="required"/>
+        <input type="submit" value="Add package" />
+        </ul>
+    </form>
+</body>
+</html>
